@@ -1,0 +1,13 @@
+﻿@model Palindrome.Web.ViewModels.PalindromeViewModel
+
+<form asp-controller="Palindromes" asp-action="Remove">
+    <div class="col-md-4">
+        <div class="card flex-row border-primary mb-3" style="min-width: 12rem;">
+            <div class="card-body">
+                <p class="card-text">@Model.Text</p>
+                <small class="text-muted">Created on @Model.CreatedDate.ToShortDateString()</small>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" asp-for="@Model.Id" />
+</form>
